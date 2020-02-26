@@ -367,3 +367,4 @@ class LoginScreen extends StatelessWidget {
 
 [example project]: example/
 # NearHuscarl-flutter_login-823d79f
+# Flutter_login
