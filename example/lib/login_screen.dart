@@ -5,9 +5,11 @@ import 'constants.dart';
 import 'custom_route.dart';
 import 'dashboard_screen.dart';
 import 'users.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = '/login';
+  SharedPreferences sharedPreferences;
 
   Duration get loginTime => Duration(milliseconds: timeDilation.ceil() * 2250);
 
@@ -150,6 +152,7 @@ class LoginScreen extends StatelessWidget {
         print('Login info');
         print('Name: ${loginData.name}');
         print('Password: ${loginData.password}');
+        _onChanged(loginData);
         return _loginUser(loginData);
       },
       onSignup: (loginData) {
@@ -171,5 +174,17 @@ class LoginScreen extends StatelessWidget {
       },
       showDebugButtons: true,
     );
+  }
+
+  _onChanged(LoginData loginData) async {
+    sharedPreferences = await SharedPreferences.getInstance();
+//    setState(() {
+//      checkValue = value;
+      sharedPreferences.setBool("check", true);
+      sharedPreferences.setString("username", loginData.name);
+      sharedPreferences.setString("password", loginData.password);
+      sharedPreferences.commit();
+//      getCredential();
+//    });
   }
 }

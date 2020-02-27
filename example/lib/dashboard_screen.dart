@@ -9,6 +9,7 @@ import 'widgets/fade_in.dart';
 import 'constants.dart';
 import 'widgets/animated_numeric_text.dart';
 import 'widgets/round_button.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DashboardScreen extends StatefulWidget {
   static const routeName = '/dashboard';
@@ -19,7 +20,8 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen>
     with SingleTickerProviderStateMixin, TransitionRouteAware {
-
+  SharedPreferences sharedPreferences;
+  String NAME = '';
   Function toast(
       String msg, Toast toast, ToastGravity toastGravity, Color colors) {
     Fluttertoast.showToast(
@@ -182,6 +184,8 @@ class _DashboardScreenState extends State<DashboardScreen>
       primaryColor.shade200,
     ]).createShader(Rect.fromLTWH(0.0, 0.0, 418.0, 78.0));
 
+    getCredential();
+
     return ScaleTransition(
       scale: _headerScaleAnimation,
       child: FadeIn(
@@ -214,11 +218,30 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
               ],
             ),
-            Text('Account Balance', style: theme.textTheme.caption),
+            Text('Account Balance', style: theme.textTheme.caption),  // 'Account Balance'
           ],
         ),
       ),
     );
+  }
+
+  getCredential() async {
+    sharedPreferences = await SharedPreferences.getInstance();
+//    setState(() {
+//      checkValue = sharedPreferences.getBool("check");
+      if (sharedPreferences.getBool("check") != null) {
+//        if (checkValue) {
+        NAME = sharedPreferences.getString("username");
+//          password.text = sharedPreferences.getString("password");
+//        } else {
+//          username.text = "";
+//          password.text = "";
+//          sharedPreferences.clear();
+//        }
+//      } else {
+//        checkValue = false;
+      }
+//    });
   }
 
   Widget _buildButton({Widget icon, String label, Interval interval}) {
