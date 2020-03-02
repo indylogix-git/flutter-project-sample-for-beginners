@@ -21,6 +21,7 @@ class LoginScreen extends StatelessWidget {
       if (mockUsers[data.name] != data.password) {
         return 'Password does not match';
       }
+      _saveValues(data);
       return null;
     });
   }
@@ -153,6 +154,7 @@ class LoginScreen extends StatelessWidget {
         print('Name: ${loginData.name}');
         print('Password: ${loginData.password}');
         _onChanged(loginData);
+        _saveValues(loginData);
         return _loginUser(loginData);
       },
       onSignup: (loginData) {
@@ -174,6 +176,12 @@ class LoginScreen extends StatelessWidget {
       },
       showDebugButtons: true,
     );
+  }
+
+  _saveValues(LoginData loginData) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString("name", loginData.name);
+    prefs.setString("phone", loginData.password);  // phoneController.text
   }
 
   _onChanged(LoginData loginData) async {

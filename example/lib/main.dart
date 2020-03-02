@@ -67,6 +67,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
 class SplashScreen extends StatefulWidget {
   static const routeName = '/auth';
 

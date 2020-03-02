@@ -185,6 +185,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     ]).createShader(Rect.fromLTWH(0.0, 0.0, 418.0, 78.0));
 
     getCredential();
+    getSharedPreferences();
 
     return ScaleTransition(
       scale: _headerScaleAnimation,
@@ -218,11 +219,17 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
               ],
             ),
-            Text('Account Balance', style: theme.textTheme.caption),  // 'Account Balance'
+            Text(NAME, style: theme.textTheme.caption),  // 'Account Balance'
           ],
         ),
       ),
     );
+  }
+
+  getSharedPreferences() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    NAME = prefs.getString("name");
+//    phoneController.text = prefs.getString("phone");
   }
 
   getCredential() async {
