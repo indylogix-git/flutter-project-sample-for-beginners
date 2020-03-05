@@ -7,6 +7,7 @@ import 'dashboard_screen.dart';
 import 'users.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
   static const routeName = '/login';
   SharedPreferences sharedPreferences;

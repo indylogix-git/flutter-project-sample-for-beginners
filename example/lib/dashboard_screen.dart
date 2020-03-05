@@ -369,7 +369,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     final theme = Theme.of(context);
 
     return WillPopScope(
-      onWillPop: () => _goToLogin(context),
+//      onWillPop: () => _goToLogin(context),
       child: SafeArea(
         child: Scaffold(
           appBar: _buildAppBar(theme),
