@@ -1,7 +1,8 @@
 # Flutter Login
 
-As lot of people and freshers want to learn Flutter, use this sample Flutter application to learn basics of Flutter to design Login, Register and Dashboard page.
-The code contains activities and fragments both; Left drawer menu, right drop doun menu, action bar menu and bottom tab menus with slide view pager. 
+<p>As lot of people and freshers want to learn Flutter, use this sample Flutter application to learn basics of Flutter to design Login, Register and Dashboard page.</p>
+
+<p>The code contains activities and fragments both; Left drawer menu, right drop doun menu, action bar menu and bottom tab menus with slide view pager. </p>
 Major inclusions in code:
 The APIs used to validate fields.
 Profile view
