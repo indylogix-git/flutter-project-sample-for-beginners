@@ -1,7 +1,14 @@
 # Flutter Login
 
-`FlutterLogin` is a ready-made login/signup widget with many animation effects to
-demonstrate the capabilities of Flutter
+`As lot of people and freshers want to learn Flutter, use this sample Flutter application to learn basics of Flutter to design Login, Register and Dashboard page.
+The code contains activities and fragments both; Left drawer menu, right drop doun menu, action bar menu and bottom tab menus with slide view pager. 
+Major inclusions in code:
+The APIs used to validate fields.
+Profile view
+Share preference
+Image pickup from camera or gallery
+Crop image
+If you want to outsource your Flutter project, email us on info@indylogix.com
 
 <p align="center">
   <a href='https://i.imgur.com/z3FJSe7.mp4'>
