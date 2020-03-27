@@ -10,10 +10,6 @@ Image pickup from camera or gallery
 Crop image
 If you want to outsource your Flutter project, email us on info@indylogix.com
 
-<p align="center">
-    <img src='https://github.com/NearHuscarl/flutter_login/raw/master/demo/demo.gif' width=320>
-  </a>
-</p>
 
 ## Installation
 
