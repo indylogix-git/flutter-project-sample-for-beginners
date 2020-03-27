@@ -11,7 +11,6 @@ Crop image
 If you want to outsource your Flutter project, email us on info@indylogix.com
 
 <p align="center">
-  <a href='https://i.imgur.com/z3FJSe7.mp4'>
     <img src='https://github.com/NearHuscarl/flutter_login/raw/master/demo/demo.gif' width=320>
   </a>
 </p>
