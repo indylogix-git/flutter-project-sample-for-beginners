@@ -4,12 +4,12 @@
 
 <p>The code contains activities and fragments both; Left drawer menu, right drop doun menu, action bar menu and bottom tab menus with slide view pager. </p>
 
-Major inclusions in code:
-The APIs used to validate fields.
-Profile view
-Share preference
-Image pickup from camera or gallery
-Crop image
+<p>Major inclusions in code:</p>
+<p>The APIs used to validate fields.</p>
+<p>Profile view</p>
+<p>Share preference</p>
+<p>Image pickup from camera or gallery</p>
+<p>Crop image</p>
 
 If you want to outsource your Flutter project, email us on info@indylogix.com
 
